@@ -53,12 +53,25 @@ class LinkedList{
             console.log("invalid index");
         }
         for(let i = 0; i < index; i++){
+            
             prev = current;
             // console.log(current);
             current = current.next;
         }
         prev.next = newNode;
         newNode.next = current;
+    }
+    deleteIndex(index){
+        let current = this.head;
+        let prev;
+        if(index<0 || index > this.size){
+            console.log("invalid index");
+        }
+        for(let i = 0; i < index; i++){
+            prev = current.next;
+        }
+        let nextNode = prev.next.next; 
+        prev.next = nextNode;
     }
 }
 
@@ -71,4 +84,5 @@ link.addFirst(2);
 link.addFirst(3);
 // link.addLast(9);
 link.indexInsert(2,10);
+link.deleteIndex(2);
 link.print();
