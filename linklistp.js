@@ -73,6 +73,20 @@ class LinkedList{
         let nextNode = prev.next.next; 
         prev.next = nextNode;
     }
+    removeFirst(){
+        let current = this.head;
+        let next = current.next;
+        this.head = next;
+    }
+    removeLast(){
+        let current = this.head;
+        let prev;
+        while(current.next){
+            prev = current;
+            current = current.next;
+        }
+        prev.next = null;
+    }
 }
 
 
@@ -85,4 +99,6 @@ link.addFirst(3);
 // link.addLast(9);
 link.indexInsert(2,10);
 link.deleteIndex(2);
+link.removeFirst();
+link.removeLast();
 link.print();
