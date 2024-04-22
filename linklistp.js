@@ -112,7 +112,6 @@ class LinkedList{
                     prev = this.head;
                     c++;
                 }
-            // }
             }else{
                 if(current.data%2 === 0){
                     prev.next = current;
