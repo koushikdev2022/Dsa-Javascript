@@ -9,7 +9,7 @@ class LinkedList{
     constructor(){
         this.head = null;
     }
-    print(data){
+    print(){
         let current = this.head;
         while(current){
             console.log(current.data);
