@@ -100,7 +100,7 @@ class LinkedList{
       }
       this.head = prev;
     }
-    onlyPrimes(){
+    even(){
         let current = this.head;
         let prev = null;
         let c = 0;
@@ -145,5 +145,5 @@ link.addFirst(5);
 link.print();
 console.log('hi');
 // link.reverse();
-link.onlyPrimes();
+link.even();
 link.print();
