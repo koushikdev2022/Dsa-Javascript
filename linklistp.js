@@ -143,7 +143,6 @@ link.addFirst(5);
 // link.addFirst(50);
 // link.addFirst(60);
 link.print();
-console.log('hi');
 // link.reverse();
 link.even();
 link.print();
