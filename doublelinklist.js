@@ -17,6 +17,17 @@ class LinkedList{
         }
        
     }
+    size(){
+        let current = this.head;
+        let count = 0;
+        while(current){
+            count++;
+            current = current.next;
+        }
+        console.log(count,"size of linklist");
+        return count;
+       
+    }
     addFirst(data){
         const newNode = new Node(data);
         newNode.next = this.head;
@@ -48,3 +59,4 @@ link.addFirst(3);
 link.addFirst(2);
 link.addLast(9);
 link.print();
+link.size();
