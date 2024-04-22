@@ -112,12 +112,11 @@ class LinkedList{
                     prev = this.head;
                     c++;
                 }
-                console.log(c,"c");
+            // }
             }else{
-                if(current.data%2 !== 0){
+                if(current.data%2 === 0){
                     prev.next = current;
-                    current = newNode;
-                    
+                    prev = current;
                 }
             }
             current = newNode;
@@ -134,8 +133,10 @@ link.addFirst(6);
 link.addFirst(1);
 link.addFirst(7);
 link.addFirst(2);
+link.addFirst(8);
 link.addFirst(3);
 link.addFirst(4);
+link.addFirst(5);
 // link.addLast(9);
 // link.indexInsert(2,10);
 // link.deleteIndex(2);
