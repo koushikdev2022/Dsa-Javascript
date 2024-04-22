@@ -100,19 +100,37 @@ class LinkedList{
       }
       this.head = prev;
     }
-    double(){
+    onlyPrimes(){
         let current = this.head;
+        let prev = null;
+        let c = 0;
         while(current){
-            if(current%2 != 0){
-                current.next = current.next.next
+            let newNode = current.next;
+            if(c === 0){
+                if(current.data%2 === 0){
+                    this.head = current;
+                    prev = this.head;
+                    c++;
+                }
+                console.log(c,"c");
+            }else{
+                if(current.data%2 !== 0){
+                    prev.next = current;
+                    current = newNode;
+                    
+                }
             }
+            current = newNode;
+           
         }
+        console.log(prev,"prev");
+        return prev;
     }
 }
 
 
 const link = new LinkedList();
-
+link.addFirst(6);
 link.addFirst(1);
 link.addFirst(7);
 link.addFirst(2);
@@ -127,6 +145,6 @@ link.addFirst(4);
 // link.addFirst(60);
 link.print();
 console.log('hi');
-link.reverse();
-link.double();
+// link.reverse();
+link.onlyPrimes();
 link.print();
