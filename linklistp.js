@@ -121,7 +121,6 @@ class LinkedList{
             current = newNode;
            
         }
-        console.log(prev,"prev");
         return prev;
     }
 }
