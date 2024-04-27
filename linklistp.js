@@ -123,6 +123,17 @@ class LinkedList{
         }
         return prev;
     }
+    palendrom(){
+        let current = this.head;
+        let prev = null;
+
+        while(current){
+            let nextNode = current.next;
+            current.next = prev;
+            prev = current;
+            current = nextNode;
+        }
+    }
 }
 
 
